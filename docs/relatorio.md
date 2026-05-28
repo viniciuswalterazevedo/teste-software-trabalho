@@ -1,5 +1,5 @@
 # Relatorio - Hotel Aurora
-
+### Vinicius Walter Azevedo, Luana Corrêa
 ## Descricao da aplicacao
 
 O Hotel Aurora e um sistema web academico para uma rede hoteleira. Ele possui home publica, cadastro, login, home apos login, listagem de quartos, criacao de reservas, consulta de minhas reservas, cancelamento e contato.
