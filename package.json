@@ -1,0 +1,15 @@
+{
+  "name": "hotel-aurora-testes",
+  "version": "1.0.0",
+  "description": "Sistema academico de hotel com Node, MySQL, Selenium e Pytest.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0"
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel | Hotel Aurora</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand"><h1>Hotel Aurora</h1><p id="welcome">Area do cliente</p></div>
+      <nav><a href="home.html">Inicio</a><a href="quartos.html">Quartos</a><a href="minhas-reservas.html">Minhas Reservas</a><a href="cancelamento.html">Cancelamento</a><button id="logoutBtn">Sair</button></nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="page-title"><h2>Bem-vindo ao painel</h2><p>Gerencie sua hospedagem e acompanhe suas reservas.</p></section>
+    <section class="grid grid-3">
+      <article class="card"><h3>Nova reserva</h3><p class="meta">Pesquise quartos por data e quantidade de hospedes.</p><div class="actions"><a class="btn" href="quartos.html">Reservar</a></div></article>
+      <article class="card"><h3>Minhas reservas</h3><p class="meta">Veja codigos, datas, status e valores das reservas.</p><div class="actions"><a class="btn" href="minhas-reservas.html">Consultar</a></div></article>
+      <article class="card"><h3>Cancelamento</h3><p class="meta">Cancele reservas ativas da sua conta com seguranca.</p><div class="actions"><a class="btn btn-danger" href="cancelamento.html">Cancelar</a></div></article>
+    </section>
+  </main>
+  <footer><p>2026 Hotel Aurora - Area do cliente</p></footer>
+  <script src="js/api.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

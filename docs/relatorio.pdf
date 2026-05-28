@@ -1,0 +1,248 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 2768 >>
+stream
+BT
+/F1 10 Tf
+50 790 Td
+14 TL
+(Relatorio - Hotel Aurora) Tj
+T*
+() Tj
+T*
+(Descricao da aplicacao) Tj
+T*
+() Tj
+T*
+(O Hotel Aurora e um sistema web academico para uma rede hoteleira. Ele possui home publica,) Tj
+T*
+(cadastro, login, home apos login, listagem de quartos, criacao de reservas, consulta de) Tj
+T*
+(minhas reservas, cancelamento e contato.) Tj
+T*
+() Tj
+T*
+(O backend foi refeito em Node.js com Express e MySQL. As senhas sao salvas como texto) Tj
+T*
+(simples por se tratar de um trabalho academico, conforme solicitado. O banco e criado) Tj
+T*
+(automaticamente com tabelas para usuarios, sessoes, quartos, reservas e mensagens de) Tj
+T*
+(contato.) Tj
+T*
+() Tj
+T*
+(Estrutura) Tj
+T*
+() Tj
+T*
+(- index.js: entrada da aplicacao Node.) Tj
+T*
+(- routes/: rotas de autenticacao, quartos, reservas e contato.) Tj
+T*
+(- utils/: conexao MySQL, autenticacao e validacoes.) Tj
+T*
+(- public/: paginas HTML, CSS e JavaScript do frontend.) Tj
+T*
+(- testes/: testes Python com Pytest e Selenium.) Tj
+T*
+() Tj
+T*
+(Tabela de decisao 1 - Cadastro/Login) Tj
+T*
+() Tj
+T*
+(|  Regra  |  Nome preenchido  |  Email valido  |  Telefone valido  |  Senha >= 4  |  Email) Tj
+T*
+(ja existe  |  Resultado esperado  |) Tj
+T*
+(|  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |) Tj
+T*
+(|  R1  |  Sim  |  Sim  |  Sim  |  Sim  |  Nao  |  Usuario cadastrado e logado  |) Tj
+T*
+(|  R2  |  Nao  |  Sim  |  Sim  |  Sim  |  Nao  |  Erro de campos obrigatorios  |) Tj
+T*
+(|  R3  |  Sim  |  Nao  |  Sim  |  Sim  |  Nao  |  Erro de email invalido  |) Tj
+T*
+(|  R4  |  Sim  |  Sim  |  Nao  |  Sim  |  Nao  |  Erro de telefone invalido  |) Tj
+T*
+(|  R5  |  Sim  |  Sim  |  Sim  |  Nao  |  Nao  |  Erro de senha curta  |) Tj
+T*
+(|  R6  |  Sim  |  Sim  |  Sim  |  Sim  |  Sim  |  Erro de email ja cadastrado  |) Tj
+T*
+() Tj
+T*
+(Tabela de decisao 2 - Reserva) Tj
+T*
+() Tj
+T*
+(|  Regra  |  Usuario logado  |  Check-in preenchido  |  Check-out > Check-in  |  Hospedes) Tj
+T*
+(valido  |  Capacidade suficiente  |  Quarto existe  |  Resultado esperado  |) Tj
+T*
+(|  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |) Tj
+T*
+(|  R1  |  Sim  |  Sim  |  Sim  |  Sim  |  Sim  |  Sim  |  Reserva criada com codigo  |) Tj
+T*
+(|  R2  |  Nao  |  Sim  |  Sim  |  Sim  |  Sim  |  Sim  |  Erro solicitando login  |) Tj
+T*
+(|  R3  |  Sim  |  Nao  |  -  |  Sim  |  Sim  |  Sim  |  Erro de datas obrigatorias  |) Tj
+T*
+(|  R4  |  Sim  |  Sim  |  Nao  |  Sim  |  Sim  |  Sim  |  Erro de periodo invalido  |) Tj
+T*
+(|  R5  |  Sim  |  Sim  |  Sim  |  Nao  |  Sim  |  Sim  |  Erro de hospedes invalido  |) Tj
+T*
+(|  R6  |  Sim  |  Sim  |  Sim  |  Sim  |  Nao  |  Sim  |  Erro de capacidade excedida  |) Tj
+T*
+(|  R7  |  Sim  |  Sim  |  Sim  |  Sim  |  Sim  |  Nao  |  Erro de quarto nao encontrado  |) Tj
+T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Length 1268 >>
+stream
+BT
+/F1 10 Tf
+50 790 Td
+14 TL
+() Tj
+T*
+(Testes implementados) Tj
+T*
+() Tj
+T*
+(Pytest unitario) Tj
+T*
+() Tj
+T*
+(Arquivo: testes/unit/test_validators.py) Tj
+T*
+() Tj
+T*
+(Valida funcoes de email, calculo de diarias e regras das tabelas de decisao usando os) Tj
+T*
+(validadores JavaScript do backend via Node.) Tj
+T*
+() Tj
+T*
+(Pytest de integracao) Tj
+T*
+() Tj
+T*
+(Arquivo: testes/integration/test_api.py) Tj
+T*
+() Tj
+T*
+(Sobe o servidor Node em porta temporaria, usa banco MySQL de teste e valida cadastro, login) Tj
+T*
+(automatico, busca de quartos, criacao de reserva e cancelamento.) Tj
+T*
+() Tj
+T*
+(Selenium WebDriver) Tj
+T*
+() Tj
+T*
+(Arquivo: testes/selenium/test_fluxo_interface.py) Tj
+T*
+() Tj
+T*
+(Automatiza o fluxo de caixa preta:) Tj
+T*
+() Tj
+T*
+(1. Cadastro do cliente.) Tj
+T*
+(2. Entrada na home apos login.) Tj
+T*
+(3. Pesquisa de quartos.) Tj
+T*
+(4. Criacao de reserva.) Tj
+T*
+(5. Consulta em minhas reservas.) Tj
+T*
+(6. Cancelamento da reserva.) Tj
+T*
+() Tj
+T*
+(Evidencia) Tj
+T*
+() Tj
+T*
+(Comando:) Tj
+T*
+() Tj
+T*
+(bash) Tj
+T*
+(python -m pytest -q) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Resultado local:) Tj
+T*
+() Tj
+T*
+(text) Tj
+T*
+(7 passed) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(O teste Selenium executou com Selenium Manager, sem exigir driver configurado manualmente no) Tj
+T*
+ET
+endstream
+endobj
+4 0 obj
+<< /Length 45 >>
+stream
+BT
+/F1 10 Tf
+50 790 Td
+14 TL
+(PATH.) Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 8 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 8 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 3 0 R >>
+endobj
+7 0 obj
+<< /Type /Page /Parent 8 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+8 0 obj
+<< /Type /Pages /Kids [5 0 R 6 0 R 7 0 R] /Count 3 >>
+endobj
+9 0 obj
+<< /Type /Catalog /Pages 8 0 R >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000002899 00000 n 
+0000004219 00000 n 
+0000004314 00000 n 
+0000004440 00000 n 
+0000004566 00000 n 
+0000004692 00000 n 
+0000004761 00000 n 
+trailer
+<< /Size 10 /Root 9 0 R >>
+startxref
+4810
+%%EOF

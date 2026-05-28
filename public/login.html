@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Hotel Aurora</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header><div class="container topbar"><div class="brand"><h1>Hotel Aurora</h1></div><nav><a href="index.html">Home</a><a href="cadastro.html">Cadastro</a></nav></div></header>
+  <main class="container auth-layout">
+    <section class="auth-card">
+      <h2>Entrar</h2>
+      <form id="loginForm">
+        <div class="form-group"><label for="email">Email</label><input id="email" type="email"></div>
+        <div class="form-group"><label for="password">Senha</label><input id="password" type="password"></div>
+        <button class="btn" type="submit">Entrar</button>
+        <div id="msg" class="message error"></div>
+      </form>
+      <div class="actions"><a href="cadastro.html">Ainda nao tenho conta</a></div>
+    </section>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

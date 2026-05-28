@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quartos | Hotel Aurora</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand"><h1>Hotel Aurora</h1><p>Escolha o quarto ideal</p></div>
+      <nav><a href="home.html">Inicio</a><a href="quartos.html">Quartos</a><a href="minhas-reservas.html">Minhas Reservas</a><button id="logoutBtn">Sair</button></nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="page-title"><h2>Quartos disponiveis</h2><p>Informe o periodo para filtrar por capacidade e seguir para a reserva.</p></section>
+    <section class="search-bar">
+      <form id="searchForm" class="form-grid">
+        <div><label for="checkin">Check-in</label><input type="date" id="checkin"></div>
+        <div><label for="checkout">Check-out</label><input type="date" id="checkout"></div>
+        <div><label for="guests">Hospedes</label><select id="guests"><option value="">Selecione</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
+        <div style="align-self:end"><button class="btn" type="submit">Pesquisar</button></div>
+      </form>
+      <div id="msg" class="message error"></div>
+    </section>
+    <section id="rooms" class="grid grid-3" style="margin-top:20px"></section>
+  </main>
+  <footer><p>2026 Hotel Aurora</p></footer>
+  <script src="js/api.js"></script>
+  <script src="js/quartos.js"></script>
+</body>
+</html>
